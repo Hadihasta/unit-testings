@@ -1,0 +1,45 @@
+DB ready with orm 
+sequelize db:create
+sequelize db:migrate
+sequelize db:seed:all
+
+
+
+Docker command 
+
+{DELETE}
+
+DELET ALL container 
+    docker rm -vf $(docker ps -aq)
+
+DELETE ALL IMAGE 
+docker rmi $(docker images -q)
+
+DELETE ALL VOLUME  
+docker system prune
+
+DELETE DANGLING VOLUME 
+docker volume rm $(docker volume ls -qf dangling=true)
+
+
+
+{SHOW}
+
+show container
+docker ps
+
+show images
+docker images
+
+show volume
+docker volume ls
+
+
+
+npx sequelize db:create --env docker
+npx sequelize db:migrate --env docker
+npx sequelize db:seed:all --env docker
+
+
+execute
+docker exec -it (id) sh

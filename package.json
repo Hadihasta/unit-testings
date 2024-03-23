@@ -1,0 +1,25 @@
+{
+  "name": "week-011_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles --runInBand --forceExit --silent --coverage --verbose --watchAll ",
+    "dev": "nodemon ./connect/listen.js",
+    "docker" : "NODE_ENV=docker && node ./connect/listen.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "mysql2": "^3.9.2",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.3",
+    "sequelize": "^6.37.1",
+    "supertest": "^6.3.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
